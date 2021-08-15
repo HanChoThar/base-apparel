@@ -1,0 +1,164 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.main_all{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.main_all .text{
+  padding: 3rem 7rem;
+}
+
+.logo_pc{
+  margin-bottom: 4rem;
+}
+
+.text h2{
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
+}
+
+.text p{
+  line-height: 1.6;
+  color: hsl(0, 36%, 70%);
+  margin-bottom: 4rem;
+}
+
+.form{
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+
+input {
+  padding: 0.78rem 0.875rem;
+  border: 1px solid grey;
+  border-radius: 2.5rem;
+  outline: none;
+  width: 50%;
+}
+
+::placeholder {
+  color: hsl(0, 6%, 24%);
+}
+
+input:focus {
+  border-color: hsl(0, 93%, 68%);
+}
+
+.btn {
+  position: absolute;
+  left: 40%;
+  border-radius: 2.5rem;
+  background: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+  color: white;
+  padding: 0.8125rem 2.1875rem;
+  box-shadow: 0px 6px 10px rgb(175, 172, 172);
+  cursor: pointer;
+}
+
+.error{
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fade 1s ease forwards;
+}
+
+@keyframes fade{
+  0%{ opacity: 0;}
+  50%{  opacity: 0.5;}
+  100%{ opacity: 1;}
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+.logo_mobo{
+  display: none;
+}
+
+.img_mobo{
+  display: none;
+}
+
+/* .img_desk{
+  width: 100%;
+  height: auto; 
+} */
+
+
+@media (max-width: 900px){
+
+  .main_all{
+    grid-template-columns: 1fr;
+  }
+
+  .main_all .text{
+    padding: 1rem;
+    order: 2;
+    padding: 0;
+  }
+
+  .text h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .text p{
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+  }
+
+  .form{
+    display: flex;
+    justify-content: center;
+  }
+
+  input{
+    width: 60%;
+  }
+
+  .btn{
+    left: 60%;
+  }
+
+  .main_all .photo{
+    order: 1;
+  }
+
+  .logo_pc{
+    display: none;
+  }
+
+  .logo_mobo{
+    display: block;
+    padding: 2rem;
+    color: black;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .img_mobo{
+    display: block;
+    width: 100%;
+    
+  }
+
+  .img_desk{
+    display: none;
+  }
+
+}
