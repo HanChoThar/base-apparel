@@ -145,7 +145,7 @@ input:focus {
 
   .logo_mobo{
     display: block;
-    padding: 2rem;
+    /* padding: 2rem; */
     color: black;
     width: 100%;
     z-index: 9999;
